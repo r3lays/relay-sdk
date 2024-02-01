@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 15.0.0
+
+### Major Changes
+
+- 22f02e7: fixes
+
+### Patch Changes
+
+- Updated dependencies [22f02e7]
+  - relay-testing-deployment@15.0.0
+
 ## 14.0.0
 
 ### Major Changes

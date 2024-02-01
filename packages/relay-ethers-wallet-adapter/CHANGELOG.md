@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 10.0.0
+
+### Major Changes
+
+- b09ab28: More st
+
+### Patch Changes
+
+- Updated dependencies [b09ab28]
+  - relay-testing-deployment@10.0.0
+
 ## 9.0.0
 
 ### Major Changes

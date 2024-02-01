@@ -1,5 +1,20 @@
 # testing-relay-ethers-wallet-adapter
 
+## 5.0.0
+
+### Major Changes
+
+- a083e80: Test
+
+### Minor Changes
+
+- 4376780: TEest
+
+### Patch Changes
+
+- Updated dependencies [4376780]
+  - relay-testing-deployment@5.0.0
+
 ## 4.1.0
 
 ### Minor Changes

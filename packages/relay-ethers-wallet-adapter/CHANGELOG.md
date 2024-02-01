@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 8.0.0
+
+### Major Changes
+
+- Testing
+
+### Patch Changes
+
+- Updated dependencies
+  - relay-testing-deployment@8.0.0
+
 ## 7.0.0
 
 ### Major Changes

@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 6.0.0
+
+### Major Changes
+
+- 144d6cd: Testing
+
+### Patch Changes
+
+- Updated dependencies [144d6cd]
+  - relay-testing-deployment@6.0.0
+
 ## 5.0.0
 
 ### Major Changes

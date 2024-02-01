@@ -9,6 +9,7 @@
     "types": "./_types/src/index.d.ts",
     "typings": "./_types/src/index.d.ts",
     "sideEffects": false,
+    
     "files": [
         "./_cjs",
         "./_esm",
@@ -21,11 +22,15 @@
     },
     "scripts": {
         "deploy": "npm publish --tolerate-republish --access public",
+
+        "?build-publishable-release": "Workaround for changeset and workspace protocol: https://github.com/atlassian/changesets/pull/585",
+        "build-publishable-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz",
+
+        "clean": "rimraf --no-glob ./dist ./build ./coverage ./out ./_release ./_esm ./_cjs ./_types",
         "build": "bun run clean && bun run build:cjs && bun run build:esm && bun run build:types",
         "build:cjs": "tsc --project ./tsconfig.build.json --module commonjs --outDir ./_cjs --removeComments --verbatimModuleSyntax false && printf '{\"type\":\"commonjs\"}' > ./_cjs/package.json",
         "build:esm": "tsc --project ./tsconfig.build.json --module es2015 --outDir ./_esm && printf '{\"type\": \"module\",\"sideEffects\":false}' > ./_esm/package.json",
         "build:types": "tsc --project ./tsconfig.build.json --module esnext --outDir ./_types --declarationDir ./_types --emitDeclarationOnly --declaration --declarationMap",
-        "clean": "rimraf ./_esm ./_cjs ./_types",
         "typecheck": "tsc --noEmit"
     },
     "repository": {
@@ -42,7 +47,8 @@
         "sdk-adapter"
     ],
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "directory": "_release/package"
     },
     "devDependencies": {
         "@types/bun": "latest",

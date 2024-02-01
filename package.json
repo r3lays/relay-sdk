@@ -7,13 +7,13 @@
   ],
   "scripts": {
     "demo": "bun run --cwd demo dev",
+
     "package:change": "bun changeset && git stage ./.changeset/* && git commit --m \"feat: changeset\" && git push",
-    "package:release": "bun run deploy && changeset version && bun run ./scripts/generate.js && changeset publish",
-    "ci:publish": "yarn publish -r --access public && changeset tag",
+    "package:release": "changeset version && bun run deploy && changeset publish",
+    "build:adapter:publishable":"bun run --cwd packages/relay-ethers-wallet-adapter build-publishable-release",
     "build:sdk": "bun run --cwd packages/sdk build",
-    "build:adapter": "bun run --cwd packages/relay-ethers-wallet-adapter build",
     "syncSdkTypes": "bun run --cwd packages/sdk ./scripts/sync-api.mjs",
-    "deploy": "bun build:sdk && bun run --cwd packages/sdk deploy",
+    "deploy": "bun build:sdk && bun build:adapter:publishable",
     "sdk": "bun run --cwd packages/sdk dev",
     "typecheck": "tsc --noEmit"
   },

@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 16.0.0
+
+### Major Changes
+
+- f7d5811: fix deps
+
+### Patch Changes
+
+- Updated dependencies [f7d5811]
+  - relay-testing-deployment@16.0.0
+
 ## 15.0.0
 
 ### Major Changes

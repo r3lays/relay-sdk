@@ -22,7 +22,7 @@
     "scripts": {
         "deploy": "npm publish --tolerate-republish --access public",
         "?build-publishable-release": "Workaround for changeset and workspace protocol: https://github.com/atlassian/changesets/pull/585",
-        "build-publishable-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz",
+        "build-publishable-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./testing-relay-ethers-wallet-adapter.tgz --directory ./_release && rm ./testing-relay-ethers-wallet-adapter.tgz",
         "clean": "rimraf --no-glob ./dist ./build ./coverage ./out ./_release ./_esm ./_cjs ./_types",
         "build": "bun run clean && bun run build:cjs && bun run build:esm && bun run build:types",
         "build:cjs": "tsc --project ./tsconfig.build.json --module commonjs --outDir ./_cjs --removeComments --verbatimModuleSyntax false && printf '{\"type\":\"commonjs\"}' > ./_cjs/package.json",

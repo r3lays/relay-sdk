@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 13.0.0
+
+### Major Changes
+
+- a52d5fc: t
+
+### Patch Changes
+
+- Updated dependencies [a52d5fc]
+  - relay-testing-deployment@13.0.0
+
 ## 12.0.0
 
 ### Major Changes

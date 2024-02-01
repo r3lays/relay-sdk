@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 11.0.0
+
+### Major Changes
+
+- eac21bf: Test
+
+### Patch Changes
+
+- Updated dependencies [eac21bf]
+  - relay-testing-deployment@11.0.0
+
 ## 10.0.0
 
 ### Major Changes

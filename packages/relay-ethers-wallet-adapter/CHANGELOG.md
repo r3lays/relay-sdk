@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 9.0.0
+
+### Major Changes
+
+- 1b5c660: Ahhhhh work
+
+### Patch Changes
+
+- Updated dependencies [1b5c660]
+  - relay-testing-deployment@9.0.0
+
 ## 8.0.0
 
 ### Major Changes

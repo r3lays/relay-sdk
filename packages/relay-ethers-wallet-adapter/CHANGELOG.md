@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 7.0.0
+
+### Major Changes
+
+- 511dac0: Testing build
+
+### Patch Changes
+
+- Updated dependencies [511dac0]
+  - relay-testing-deployment@7.0.0
+
 ## 6.0.0
 
 ### Major Changes

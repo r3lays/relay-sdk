@@ -1,5 +1,11 @@
 # relay-testing-deployment
 
+## 7.0.0
+
+### Major Changes
+
+- 511dac0: Testing build
+
 ## 6.0.0
 
 ### Major Changes

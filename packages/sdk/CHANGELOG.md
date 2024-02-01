@@ -1,5 +1,11 @@
 # relay-testing-deployment
 
+## 12.0.0
+
+### Major Changes
+
+- 623341e: Test
+
 ## 11.0.0
 
 ### Major Changes

@@ -1,6 +1,6 @@
 {
     "name": "testing-relay-ethers-wallet-adapter",
-    "version": "14.0.0",
+    "version": "15.0.0",
     "description": "An adapter used to convert an ethersjs signer to an Adapted Wallet for use in the @reservoir0x/relay-sdk",
     "type": "module",
     "source": "./src/index.ts",
@@ -9,7 +9,6 @@
     "types": "./_types/src/index.d.ts",
     "typings": "./_types/src/index.d.ts",
     "sideEffects": false,
-    
     "files": [
         "./_cjs",
         "./_esm",
@@ -22,10 +21,8 @@
     },
     "scripts": {
         "deploy": "npm publish --tolerate-republish --access public",
-
         "?build-publishable-release": "Workaround for changeset and workspace protocol: https://github.com/atlassian/changesets/pull/585",
         "build-publishable-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && tar zxvf ./package.tgz --directory ./_release && rm ./package.tgz",
-
         "clean": "rimraf --no-glob ./dist ./build ./coverage ./out ./_release ./_esm ./_cjs ./_types",
         "build": "bun run clean && bun run build:cjs && bun run build:esm && bun run build:types",
         "build:cjs": "tsc --project ./tsconfig.build.json --module commonjs --outDir ./_cjs --removeComments --verbatimModuleSyntax false && printf '{\"type\":\"commonjs\"}' > ./_cjs/package.json",

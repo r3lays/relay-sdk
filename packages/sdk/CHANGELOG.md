@@ -1,5 +1,11 @@
 # relay-testing-deployment
 
+## 6.0.0
+
+### Major Changes
+
+- 144d6cd: Testing
+
 ## 5.0.0
 
 ### Major Changes

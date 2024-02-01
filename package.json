@@ -7,11 +7,12 @@
   ],
   "scripts": {
     "demo": "bun run --cwd demo dev",
-    "package:change": "bun changeset && sleep 2 && bun ./scripts/generate.js && git stage ./.changeset/* && git commit --m \"feat: changeset\" && git push",
+    "package:change": "bun changeset && git stage ./.changeset/* && git commit --m \"feat: changeset\" && git push",
     "package:release": "bun run deploy && changeset version && changeset publish",
     "build:sdk": "bun run --cwd packages/sdk build",
+    "build:adapter": "bun run --cwd packages/relay-ethers-wallet-adapter build",
     "syncSdkTypes": "bun run --cwd packages/sdk ./scripts/sync-api.mjs",
-    "deploy": "bun build:sdk",
+    "deploy": "bun build:sdk && bun build:adapter",
     "sdk": "bun run --cwd packages/sdk dev",
     "typecheck": "tsc --noEmit"
   },

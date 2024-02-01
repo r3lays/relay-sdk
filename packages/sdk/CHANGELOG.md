@@ -1,5 +1,11 @@
 # relay-testing-deployment
 
+## 8.0.0
+
+### Major Changes
+
+- Testing
+
 ## 7.0.0
 
 ### Major Changes

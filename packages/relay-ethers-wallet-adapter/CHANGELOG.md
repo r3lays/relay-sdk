@@ -1,5 +1,18 @@
 # testing-relay-ethers-wallet-adapter
 
+## 18.0.0
+
+### Major Changes
+
+- 3d36365: Testing
+- 03160e9: FIXDE?
+
+### Patch Changes
+
+- Updated dependencies [3d36365]
+- Updated dependencies [03160e9]
+  - relay-testing-deployment@18.0.0
+
 ## 17.0.0
 
 ### Major Changes

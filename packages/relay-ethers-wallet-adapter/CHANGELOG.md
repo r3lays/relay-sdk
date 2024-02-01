@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 19.0.0
+
+### Major Changes
+
+- 7ecbdb6: Build
+
+### Patch Changes
+
+- Updated dependencies [7ecbdb6]
+  - relay-testing-deployment@19.0.0
+
 ## 18.0.0
 
 ### Major Changes

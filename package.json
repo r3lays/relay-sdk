@@ -9,7 +9,7 @@
     "demo": "bun run --cwd demo dev",
     "package:change": "bun changeset && git stage ./.changeset/* && git commit --m \"feat: changeset\" && git push",
     "package:release": "bun run deploy && changeset version && bun run ci:publish",
-    "ci:publish": "pnpm publish -r --access public && changeset tag",
+    "ci:publish": "yarn publish -r --access public && changeset tag",
     "build:sdk": "bun run --cwd packages/sdk build",
     "build:adapter": "bun run --cwd packages/relay-ethers-wallet-adapter build",
     "syncSdkTypes": "bun run --cwd packages/sdk ./scripts/sync-api.mjs",

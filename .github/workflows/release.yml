@@ -29,7 +29,7 @@ jobs:
           echo "$HOME/.bun/bin" >> $GITHUB_PATH
 
       - name: Install Dependencies
-        run: bun install && bun install yarn
+        run: bun install && bun install pnpm
 
       - name: Creating .npmrc
         run: |

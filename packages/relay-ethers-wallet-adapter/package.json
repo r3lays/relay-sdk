@@ -45,7 +45,7 @@
     ],
     "publishConfig": {
         "access": "public",
-        "directory": "_release/package"
+        "directory": "_release/testing-relay-ethers-wallet-adapter"
     },
     "devDependencies": {
         "@types/bun": "latest",

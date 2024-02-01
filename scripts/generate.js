@@ -1,57 +1,66 @@
-/**
- * DO NOT RUN THIS FILE MANUALLY
- * Run `bun package:change` to first generate a base changeset file.
- * This script will then append your commits to that changeset for a more descriptive changelog.
- */
+const { readFileSync, writeFileSync } = require('fs');
+const { execSync } = require('child_process');
+const wsOutput = execSync('yarn workspaces list --json', {
+  encoding: 'utf-8',
+});
 
-const { exec } = require('child_process')
-const fs = require('fs')
-const path = require('path')
+// We will only try to update dependencies in these package file types
+const DEP_TYPES_TO_UPDATE = [
+  'dependencies',
+  'devDependencies',
+  'peerDependencies',
+];
 
-const handleError = (error) => {
-  if (error) throw error
-}
+// Used to look up the current package.json version at a location
+const getPackageFile = (location) =>
+  JSON.parse(readFileSync(`${location}/package.json`));
 
-exec('git rev-parse --abbrev-ref HEAD', (error, stdout, stderr) => {
-  handleError(error)
-  handleError(stderr)
+// Object map of entries to make version replacement easier when we publish
+const workspaceVersionMap = Object.fromEntries(
+  wsOutput
+    // Create an array from the command response
+    .split('\n')
+    // Filter out any empty strings (last newline from split)
+    .filter((string) => Boolean(string))
+    // Parse JSON strings
+    .map((string) => JSON.parse(string))
+    // Create [key, value] and lookup version
+    .map(({ location, name }) => [
+      name,
+      { location, version: getPackageFile(location).version },
+    ])
+);
 
-  exec(
-    `git log main..${stdout.trim()} --pretty=format:%s`,
-    (logError, logStdout, logStderr) => {
-      handleError(logStderr)
-      handleError(logError)
+// Go replace versions in each package.json file
+for (const pkg in workspaceVersionMap) {
+  const { location } = workspaceVersionMap[pkg];
 
-      fs.readdir('.changeset', (dirErr, files) => {
-        handleError(dirErr)
+  // Get the packagefile data that we will use to rewrite the version updates.
+  // NOTE: This data will be mutated in JS before we output to overwrite the file
+  const packageFile = getPackageFile(location);
 
-        const mdFile = files.find((file) => file.endsWith('.md'))
-        if (mdFile) {
-          const filePath = path.join('.changeset', mdFile)
-          fs.readFile(filePath, 'utf8', (readErr, data) => {
-            handleError(readErr)
-
-            /**
-             * Try to split by proper commit lines where possible
-             */
-            const commitLines = logStdout
-              .split(/(?=feat:|fix:|chore:)/g)
-              .filter(Boolean)
-              .join('\n')
-
-            const updatedContent = `${data}\n\n${commitLines}`
-
-            fs.writeFile(filePath, updatedContent, 'utf8', (writeErr) => {
-              handleError(writeErr)
-              console.info(`Commit messages have been appended to ${filePath}`)
-            })
-          })
-        } else {
-          handleError(
-            new Error(`No changeset file found in .changesets directory`)
-          )
-        }
-      })
+  // Used to target a package.json dependency list type and if the dependency matches one of our workspace packages,
+  // we update the version to match the current workspace version in our workspace version map.
+  const mutuateDeps = (depType) => {
+    // Get the dependency type from the file and iterate over each dependency
+    for (const dep in packageFile[depType]) {
+      // if a dependency matches one of the dependencies in our workspace map
+      if (Object.keys(workspaceVersionMap).includes(dep)) {
+        // we mutate the package file data in memory to match the current workspace version
+        packageFile[depType][dep] = workspaceVersionMap[dep].version;
+      }
     }
-  )
-})
+  };
+
+  // Go mutate the allowed dependency types
+  DEP_TYPES_TO_UPDATE.map((dependencyType) => mutuateDeps(dependencyType));
+
+  // Write our updated files
+  writeFileSync(
+    `${location}/package.json`,
+    // Convert the file data to json
+    // include the 2 space indent formatting
+    // and also add an empty newline at the end
+    `${JSON.stringify(packageFile, null, 2)}\n`
+  );
+}

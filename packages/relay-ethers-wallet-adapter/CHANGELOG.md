@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 17.0.0
+
+### Major Changes
+
+- 8f8bfab: script
+
+### Patch Changes
+
+- Updated dependencies [8f8bfab]
+  - relay-testing-deployment@17.0.0
+
 ## 16.0.0
 
 ### Major Changes

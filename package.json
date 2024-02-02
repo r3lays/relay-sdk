@@ -12,12 +12,13 @@
   "scripts": {
     "demo": "pnpm run -C demo dev",
     "build:sdk": "pnpm run -C packages/sdk build",
+    "build:ethers-adapter": "pnpm run -C packages/testing-dogs-ethers-wallet-adapter build",
     "syncSdkTypes": "pnpm run -C packages/sdk ./scripts/sync-api.mjs",
-    "deploy": "pnpm build:sdk && pnpm run -C packages/sdk deploy",
+    "deploy": "pnpm build:sdk && pnpm build:ethers-adapter",
     "sdk": "pnpm run -C packages/sdk dev",
     "typecheck": "tsc --noEmit",
     "package:change": "pnpm changeset && git stage ./.changeset/* && git commit --m \"feat: changeset\" && git push",
-    "package:release": "pnpm run deploy && changeset version && pnpm -r publish --tolerate-republish --access public && changeset tag && git push --follow-tags"
+    "package:release": "pnpm run deploy && changeset version && pnpm -r publish --access public && changeset tag && git push --follow-tags"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

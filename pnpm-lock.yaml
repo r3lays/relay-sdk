@@ -25,7 +25,23 @@ importers:
         specifier: ^2.6.2
         version: 2.6.2
 
-  packages/dogs-ethers-wallet-adapter:
+  packages/sdk:
+    dependencies:
+      axios:
+        specifier: ^1.6.5
+        version: 1.6.7
+      typescript:
+        specifier: ^5.0.0
+        version: 5.3.3
+      viem:
+        specifier: ~1.19.15
+        version: 1.19.15(typescript@5.3.3)
+    devDependencies:
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+
+  packages/testing-dogs-ethers-wallet-adapter:
     dependencies:
       axios:
         specifier: ^0.27.2
@@ -43,22 +59,6 @@ importers:
       ethers:
         specifier: ^5.6.1
         version: 5.7.2
-      rimraf:
-        specifier: ^5.0.5
-        version: 5.0.5
-
-  packages/sdk:
-    dependencies:
-      axios:
-        specifier: ^1.6.5
-        version: 1.6.7
-      typescript:
-        specifier: ^5.0.0
-        version: 5.3.3
-      viem:
-        specifier: ~1.19.15
-        version: 1.19.15(typescript@5.3.3)
-    devDependencies:
       rimraf:
         specifier: ^5.0.5
         version: 5.0.5

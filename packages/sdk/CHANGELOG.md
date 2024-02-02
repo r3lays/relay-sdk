@@ -1,5 +1,11 @@
 # dogs-testing-deployment
 
+## 1.0.0
+
+### Major Changes
+
+- 65493da: Testing
+
 ## 21.0.0
 
 ### Major Changes

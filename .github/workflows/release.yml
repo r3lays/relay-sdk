@@ -27,7 +27,7 @@ jobs:
         run: curl -fsSL https://get.pnpm.io/install.sh | sh -
 
       - name: Install Dependencies
-        run: pnpm install
+        run: npm i -g pnpm
 
       - name: Creating .npmrc
         run: |

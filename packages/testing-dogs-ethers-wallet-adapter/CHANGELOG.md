@@ -1,5 +1,16 @@
 # testing-dogs-ethers-wallet-adapter
 
+## 5.0.0
+
+### Major Changes
+
+- 5c5458c: Test
+
+### Patch Changes
+
+- Updated dependencies [5c5458c]
+  - dogs-testing-deployment@5.0.0
+
 ## 4.0.0
 
 ### Major Changes

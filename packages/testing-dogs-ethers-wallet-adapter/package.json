@@ -47,7 +47,6 @@
         "access": "public"
     },
     "devDependencies": {
-        "@types/bun": "latest",
         "rimraf": "^5.0.5",
         "ethers": "^5.6.1"
     },

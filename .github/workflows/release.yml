@@ -24,10 +24,10 @@ jobs:
           node-version: 16.x
 
       - name: Setup pnpm
-        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+        run: sudo npm i -g pnpm
 
       - name: Install Dependencies
-        run: npm i -g pnpm
+        run: pnpm install
 
       - name: Creating .npmrc
         run: |

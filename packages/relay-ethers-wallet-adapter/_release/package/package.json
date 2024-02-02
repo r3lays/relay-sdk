@@ -1,5 +1,5 @@
 {
-    "name": "testing-relay-ethers-wallet-adapter",
+    "name": "testing-dogs-ethers-wallet-adapter",
     "version": "17.0.0",
     "description": "An adapter used to convert an ethersjs signer to an Adapted Wallet for use in the @reservoir0x/relay-sdk",
     "type": "module",
@@ -22,7 +22,7 @@
     "scripts": {
         "deploy": "npm publish --tolerate-republish --access public",
         "?build-publishable-release": "Workaround for changeset and workspace protocol: https://github.com/atlassian/changesets/pull/585",
-        "build-publishable-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && VERSION=$(node ./scripts/version.js) && tar zxvf ./testing-relay-ethers-wallet-adapter-v$VERSION.tgz --directory ./_release && rm ./testing-relay-ethers-wallet-adapter-v$VERSION.tgz",
+        "build-publishable-release": "yarn build && rimraf ./_release && yarn pack && mkdir ./_release && VERSION=$(node ./scripts/version.js) && tar zxvf ./testing-dogs-ethers-wallet-adapter-v$VERSION.tgz --directory ./_release && rm ./testing-dogs-ethers-wallet-adapter-v$VERSION.tgz",
         "clean": "rimraf --no-glob ./dist ./build ./coverage ./out ./_release ./_esm ./_cjs ./_types",
         "build": "bun run clean && bun run build:cjs && bun run build:esm && bun run build:types",
         "build:cjs": "tsc --project ./tsconfig.build.json --module commonjs --outDir ./_cjs --removeComments --verbatimModuleSyntax false && printf '{\"type\":\"commonjs\"}' > ./_cjs/package.json",
@@ -37,7 +37,7 @@
     "keywords": [
         "nft",
         "reservoir",
-        "relay-ethers-wallet-adapter",
+        "dogs-ethers-wallet-adapter",
         "reservoir-ethers-wallet-adapter",
         "relay",
         "protocol",
@@ -56,7 +56,7 @@
         "axios": "^0.27.2"
     },
     "peerDependencies": {
-        "relay-testing-deployment": "workspace:*",
+        "dogs-testing-deployment": "workspace:*",
         "ethers": "^5.6.1",
         "viem": "~1.19.15"
     }

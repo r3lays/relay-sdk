@@ -1,4 +1,4 @@
-# testing-relay-ethers-wallet-adapter
+# testing-dogs-ethers-wallet-adapter
 
 ## 21.0.0
 
@@ -9,7 +9,7 @@
 ### Patch Changes
 
 - Updated dependencies [92ccc2e]
-  - relay-testing-deployment@21.0.0
+  - dogs-testing-deployment@21.0.0
 
 ## 20.0.0
 
@@ -20,7 +20,7 @@
 ### Patch Changes
 
 - Updated dependencies [6fc6d77]
-  - relay-testing-deployment@20.0.0
+  - dogs-testing-deployment@20.0.0
 
 ## 19.0.0
 
@@ -31,7 +31,7 @@
 ### Patch Changes
 
 - Updated dependencies [7ecbdb6]
-  - relay-testing-deployment@19.0.0
+  - dogs-testing-deployment@19.0.0
 
 ## 18.0.0
 
@@ -44,7 +44,7 @@
 
 - Updated dependencies [3d36365]
 - Updated dependencies [03160e9]
-  - relay-testing-deployment@18.0.0
+  - dogs-testing-deployment@18.0.0
 
 ## 17.0.0
 
@@ -55,7 +55,7 @@
 ### Patch Changes
 
 - Updated dependencies [8f8bfab]
-  - relay-testing-deployment@17.0.0
+  - dogs-testing-deployment@17.0.0
 
 ## 16.0.0
 
@@ -66,7 +66,7 @@
 ### Patch Changes
 
 - Updated dependencies [f7d5811]
-  - relay-testing-deployment@16.0.0
+  - dogs-testing-deployment@16.0.0
 
 ## 15.0.0
 
@@ -77,7 +77,7 @@
 ### Patch Changes
 
 - Updated dependencies [22f02e7]
-  - relay-testing-deployment@15.0.0
+  - dogs-testing-deployment@15.0.0
 
 ## 14.0.0
 
@@ -90,7 +90,7 @@
 - f974060: Testing
 - Updated dependencies [f974060]
 - Updated dependencies [b5c2c9f]
-  - relay-testing-deployment@14.0.0
+  - dogs-testing-deployment@14.0.0
 
 ## 13.0.0
 
@@ -101,7 +101,7 @@
 ### Patch Changes
 
 - Updated dependencies [a52d5fc]
-  - relay-testing-deployment@13.0.0
+  - dogs-testing-deployment@13.0.0
 
 ## 12.0.0
 
@@ -112,7 +112,7 @@
 ### Patch Changes
 
 - Updated dependencies [623341e]
-  - relay-testing-deployment@12.0.0
+  - dogs-testing-deployment@12.0.0
 
 ## 11.0.0
 
@@ -123,7 +123,7 @@
 ### Patch Changes
 
 - Updated dependencies [eac21bf]
-  - relay-testing-deployment@11.0.0
+  - dogs-testing-deployment@11.0.0
 
 ## 10.0.0
 
@@ -134,7 +134,7 @@
 ### Patch Changes
 
 - Updated dependencies [b09ab28]
-  - relay-testing-deployment@10.0.0
+  - dogs-testing-deployment@10.0.0
 
 ## 9.0.0
 
@@ -145,7 +145,7 @@
 ### Patch Changes
 
 - Updated dependencies [1b5c660]
-  - relay-testing-deployment@9.0.0
+  - dogs-testing-deployment@9.0.0
 
 ## 8.0.0
 
@@ -156,7 +156,7 @@
 ### Patch Changes
 
 - Updated dependencies
-  - relay-testing-deployment@8.0.0
+  - dogs-testing-deployment@8.0.0
 
 ## 7.0.0
 
@@ -167,7 +167,7 @@
 ### Patch Changes
 
 - Updated dependencies [511dac0]
-  - relay-testing-deployment@7.0.0
+  - dogs-testing-deployment@7.0.0
 
 ## 6.0.0
 
@@ -178,7 +178,7 @@
 ### Patch Changes
 
 - Updated dependencies [144d6cd]
-  - relay-testing-deployment@6.0.0
+  - dogs-testing-deployment@6.0.0
 
 ## 5.0.0
 
@@ -193,7 +193,7 @@
 ### Patch Changes
 
 - Updated dependencies [4376780]
-  - relay-testing-deployment@5.0.0
+  - dogs-testing-deployment@5.0.0
 
 ## 4.1.0
 

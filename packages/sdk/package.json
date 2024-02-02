@@ -1,6 +1,6 @@
 {
   "version": "21.0.0",
-  "name": "relay-testing-deployment",
+  "name": "dogs-testing-deployment",
   "type": "module",
   "main": "./_cjs/src/index.js",
   "module": "./_esm/src/index.js",

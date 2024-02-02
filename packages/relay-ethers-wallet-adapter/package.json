@@ -1,5 +1,5 @@
 {
-    "name": "testing-relay-ethers-wallet-adapter",
+    "name": "testing-dogs-ethers-wallet-adapter",
     "version": "21.0.0",
     "description": "An adapter used to convert an ethersjs signer to an Adapted Wallet for use in the @reservoir0x/relay-sdk",
     "type": "module",
@@ -35,7 +35,7 @@
     "keywords": [
         "nft",
         "reservoir",
-        "relay-ethers-wallet-adapter",
+        "dogs-ethers-wallet-adapter",
         "reservoir-ethers-wallet-adapter",
         "relay",
         "protocol",
@@ -53,7 +53,7 @@
         "axios": "^0.27.2"
     },
     "peerDependencies": {
-        "relay-testing-deployment": "workspace:*",
+        "dogs-testing-deployment": "workspace:*",
         "ethers": "^5.6.1",
         "viem": "~1.19.15"
     }

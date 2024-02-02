@@ -3,7 +3,7 @@
 ### Installation
 
 ```
-yarn add @reservoir0x/relay-ethers-wallet-adapter @reservoir0x/relay-sdk
+yarn add @reservoir0x/dogs-ethers-wallet-adapter @reservoir0x/relay-sdk
 ```
 
 Also make sure to install the peer dependencies required by the adapter if your application doesn't already include them:
@@ -18,7 +18,7 @@ To use the adapter simply pass in your ethers signer and receive a normalized Ad
 
 ```
 import { getClient } from "@reservoir0x/relay-sdk";
-import { adaptEthersSigner } from "@reservoir0x/relay-ethers-wallet-adapter";
+import { adaptEthersSigner } from "@reservoir0x/dogs-ethers-wallet-adapter";
 import { useSigner } from "wagmi";
 
 const { data: signer } = useSigner();

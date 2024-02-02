@@ -6,7 +6,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~relay-ethers-wallet-adapter/*": ["./src/*"],
+      "~dogs-ethers-wallet-adapter/*": ["./src/*"],
     }
   },
   "watchOptions": {

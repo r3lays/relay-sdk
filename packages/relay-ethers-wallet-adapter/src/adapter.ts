@@ -3,7 +3,7 @@ import {
   LogLevel,
   getClient,
   type AdaptedWallet,
-} from 'relay-testing-deployment'
+} from 'dogs-testing-deployment'
 import { Signer } from 'ethers/lib/ethers.js'
 import { arrayify } from 'ethers/lib/utils.js'
 import { hexToBigInt, type CustomTransport, type HttpTransport } from 'viem'

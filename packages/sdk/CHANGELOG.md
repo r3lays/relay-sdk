@@ -1,5 +1,11 @@
 # dogs-testing-deployment
 
+## 3.0.0
+
+### Major Changes
+
+- 205ac55: Update dep
+
 ## 2.0.0
 
 ### Major Changes

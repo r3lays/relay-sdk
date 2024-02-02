@@ -1,6 +1,6 @@
 {
     "name": "testing-dogs-ethers-wallet-adapter",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "description": "An adapter used to convert an ethersjs signer to an Adapted Wallet for use in the @reservoir0x/relay-sdk",
     "type": "module",
     "source": "./src/index.ts",
@@ -29,7 +29,7 @@
         "dev:types": "tsc --watch --project ./tsconfig.build.json --module esnext --outDir ./_types --declarationDir ./_types --emitDeclarationOnly --declaration --declarationMap",
         "clean": "rimraf ./_esm ./_cjs ./_types",
         "typecheck": "tsc --noEmit"
-      },
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/reservoirprotocol/relay-sdk"

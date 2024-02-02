@@ -1,5 +1,16 @@
 # testing-dogs-ethers-wallet-adapter
 
+## 2.0.0
+
+### Major Changes
+
+- 2b201b5: ing
+
+### Patch Changes
+
+- Updated dependencies [2b201b5]
+  - dogs-testing-deployment@2.0.0
+
 ## 1.0.0
 
 ### Major Changes

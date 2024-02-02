@@ -1,5 +1,11 @@
 # dogs-testing-deployment
 
+## 2.0.0
+
+### Major Changes
+
+- 2b201b5: ing
+
 ## 1.0.0
 
 ### Major Changes

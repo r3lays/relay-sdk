@@ -27,21 +27,7 @@ jobs:
         run: npm install pnpm
 
       - name: Install Dependencies
-        run: bun install && bun install yarn
-
-      - name: Creating .npmrc
-        run: |
-              cat << EOF > "$HOME/.npmrc"
-              //registry.npmjs.org/:_authToken=$NPM_TOKEN
-              EOF
-
-      - name: Get Title From Datamuse API
-        id: datamuse
-        run: |
-          response=$(curl -s "https://api.datamuse.com/words?ml=animal")
-          title=$(echo $response | jq -r '.[0].word') 
-          echo "Title is $title"
-          echo "RELEASE_TITLE=$title" >> $GITHUB_ENV
+        run: pnpm install
 
       - name: Creating .npmrc
         run: |

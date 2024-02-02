@@ -1,5 +1,16 @@
 # testing-dogs-ethers-wallet-adapter
 
+## 3.0.0
+
+### Major Changes
+
+- 205ac55: Update dep
+
+### Patch Changes
+
+- Updated dependencies [205ac55]
+  - dogs-testing-deployment@3.0.0
+
 ## 2.0.0
 
 ### Major Changes

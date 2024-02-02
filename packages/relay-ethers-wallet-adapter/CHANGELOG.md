@@ -1,5 +1,16 @@
 # testing-relay-ethers-wallet-adapter
 
+## 21.0.0
+
+### Major Changes
+
+- 92ccc2e: TEsting
+
+### Patch Changes
+
+- Updated dependencies [92ccc2e]
+  - relay-testing-deployment@21.0.0
+
 ## 20.0.0
 
 ### Major Changes
